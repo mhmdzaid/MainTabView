@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'MainTabView_Example' do
+  pod 'MainTabView', :path => '../'
+
+  target 'MainTabView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
