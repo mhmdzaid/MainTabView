@@ -32,7 +32,7 @@ pod 'MainTabView'
 
 ```swift
 
-import ZMainTabView
+import MainTabView
 
 
     @IBOutlet weak var mainTabView: MainTabView?
@@ -52,7 +52,7 @@ extension ViewController : MainTabViewDataSource{
 
 // each child UIViewController should conform to TabItem
     
-    func viewControllersToBeHosted(in MainTabView: MainTabView) -> [TabItem] {
+    func viewControllersToBeHosted(in mainTabView: MainTabView) -> [TabItem] {
         let firstVC = instance(FirstViewController.self)//FirstViewController.instance()
         let secondVC = instance(SecondViewController.self)
         let thirdVC = instance(ThirdViewController.self)

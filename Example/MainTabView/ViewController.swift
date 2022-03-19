@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
 extension ViewController: MainTabViewDataSource, MainTabDelegate {
     
-    func viewControllersToBeHosted(in MainTabView: MainTabView) -> [TabItem] {
+    func viewControllersToBeHosted(in mainTabView: MainTabView) -> [TabItem] {
         let firstVC = instance(FirstViewController.self)//FirstViewController.instance()
         let secondVC = instance(SecondViewController.self)
         let thirdVC = instance(ThirdViewController.self)

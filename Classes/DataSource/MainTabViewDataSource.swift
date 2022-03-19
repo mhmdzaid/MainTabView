@@ -11,7 +11,7 @@ import UIKit
 
 public protocol MainTabViewDataSource {
     var viewController: UIViewController { get }
-    func viewControllersToBeHosted(in MainTabView: MainTabView ) -> [TabItem]
+    func viewControllersToBeHosted(in mainTabView: MainTabView ) -> [TabItem]
 }
 
 public extension MainTabViewDataSource where Self: UIViewController{
