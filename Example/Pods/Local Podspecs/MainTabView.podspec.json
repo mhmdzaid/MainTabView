@@ -1,0 +1,22 @@
+{
+  "name": "MainTabView",
+  "version": "0.1.0",
+  "summary": "A short description of MainTabView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/mozead1996/MainTabView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mozead1996": "mohamed.elmalhey@vodafone.com"
+  },
+  "source": {
+    "git": "https://github.com/mozead1996/MainTabView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "MainTabView/Classes/**/*"
+}

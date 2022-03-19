@@ -1,30 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aRN-7Q-Xwy">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="Twn-qj-Rhr">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MainTabView_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <viewController id="aRN-7Q-Xwy" customClass="ViewController" customModule="ZMainTabViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jAV-7Z-QZT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRu-tb-38u" customClass="MainTabView" customModule="MainTabView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q4M-ja-vXa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PRu-tb-38u" secondAttribute="bottom" id="4cJ-fP-IUs"/>
+                            <constraint firstItem="PRu-tb-38u" firstAttribute="leading" secondItem="Q4M-ja-vXa" secondAttribute="leading" id="O6p-48-bUs"/>
+                            <constraint firstItem="PRu-tb-38u" firstAttribute="top" secondItem="Q4M-ja-vXa" secondAttribute="top" id="h0c-qr-yEp"/>
+                            <constraint firstItem="PRu-tb-38u" firstAttribute="trailing" secondItem="Q4M-ja-vXa" secondAttribute="trailing" id="pcA-qj-IEq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainTabView" destination="PRu-tb-38u" id="Pa1-1j-SeQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KcQ-SC-sEb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="szv-TO-ugK">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="0X3-OO-6iu" customClass="SecondViewController" customModule="ZMainTabViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Rl-XQ-N0T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdE-2r-4Nd">
+                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="eKt-SH-Jet"/>
+                                    <constraint firstAttribute="height" constant="128" id="h5i-D2-BQy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XZs-0y-nUM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fdE-2r-4Nd" firstAttribute="centerX" secondItem="8Rl-XQ-N0T" secondAttribute="centerX" id="6At-cw-YVK"/>
+                            <constraint firstItem="fdE-2r-4Nd" firstAttribute="centerY" secondItem="8Rl-XQ-N0T" secondAttribute="centerY" id="z5h-yV-Izf"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scd-y3-waj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1465" y="100"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="5O8-Y0-0rL">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="88s-y1-XSW" customClass="FirstViewController" customModule="ZMainTabViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l8h-UE-gJP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guY-co-eZo">
+                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="86o-lk-rhq"/>
+                                    <constraint firstAttribute="height" constant="128" id="cjs-7R-Lbp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y6W-dc-Ayq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="guY-co-eZo" firstAttribute="centerY" secondItem="l8h-UE-gJP" secondAttribute="centerY" id="9eD-Pq-L1O"/>
+                            <constraint firstItem="guY-co-eZo" firstAttribute="centerX" secondItem="l8h-UE-gJP" secondAttribute="centerX" id="hgI-fd-GvX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnT-16-jDz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="100"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="Ecw-qz-ebg">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="9T1-Eu-uev" customClass="ThirdViewController" customModule="ZMainTabViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0TT-C5-3ed">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq0-K5-OIn">
+                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="R7h-mm-o9s"/>
+                                    <constraint firstAttribute="width" constant="240" id="zRg-EU-Kqr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5BF-iY-f2F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bq0-K5-OIn" firstAttribute="centerX" secondItem="0TT-C5-3ed" secondAttribute="centerX" id="Dqh-Ai-KAC"/>
+                            <constraint firstItem="Bq0-K5-OIn" firstAttribute="centerY" secondItem="0TT-C5-3ed" secondAttribute="centerY" id="d85-Dg-H62"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8A-IZ-kuQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275" y="100"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

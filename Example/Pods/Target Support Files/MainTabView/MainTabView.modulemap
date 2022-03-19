@@ -1,0 +1,6 @@
+framework module MainTabView {
+  umbrella header "MainTabView-umbrella.h"
+
+  export *
+  module * { export * }
+}

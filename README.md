@@ -20,9 +20,51 @@ it, simply add the following line to your Podfile:
 pod 'MainTabView'
 ```
 
+## Usage 
+
+### Usage : 
+1. in the hosting controller add UIView and set its class to MainTabView
+1. drag outlet of MainTabView 
+1. import MainTabView
+1. set dataSource to self 
+
+### code snipts :
+
+```swift
+
+import ZMainTabView
+
+
+    @IBOutlet weak var mainTabView: MainTabView?
+
+ class ViewController : UIViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        mainTabView?.dataSource = self
+    }
+}
+
+//here we give it our viewControllers to show 
+
+extension ViewController : MainTabViewDataSource{
+
+// each child UIViewController should conform to TabItem
+    
+    func viewControllersToBeHosted(in MainTabView: MainTabView) -> [TabItem] {
+        let firstVC = instance(FirstViewController.self)//FirstViewController.instance()
+        let secondVC = instance(SecondViewController.self)
+        let thirdVC = instance(ThirdViewController.self)
+        
+        return [firstVC,secondVC,thirdVC]
+    }
+ }
+ 
+```
 ## Author
 
-mozead1996, mohamed.elmalhey@vodafone.com
+mozead1996, mohamedzead2021@gmail.com
 
 ## License
 

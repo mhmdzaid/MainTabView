@@ -7,18 +7,53 @@
 //
 
 import UIKit
+import MainTabView
 
-class ViewController: UIViewController {
+class ViewController: UIViewController  {
+    @IBOutlet weak var mainTabView: MainTabView?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view.
+        mainTabView?.dataSource = self
+        mainTabView?.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
 }
 
+
+extension ViewController: MainTabViewDataSource, MainTabDelegate {
+    
+    func viewControllersToBeHosted(in MainTabView: MainTabView) -> [TabItem] {
+        let firstVC = instance(FirstViewController.self)//FirstViewController.instance()
+        let secondVC = instance(SecondViewController.self)
+        let thirdVC = instance(ThirdViewController.self)
+        
+        return [firstVC,secondVC,thirdVC]
+    }
+    
+    func didSelectItemAt(index: Int) {
+        print(index)
+    }
+    
+}
+
+
+
+extension UIViewController{
+    
+   
+    
+    
+    func instance<T: UIViewController>(_ type : T.Type)->T{
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: identifier(type: T.self))
+        return vc as! T
+    }
+    
+    func identifier(type : UIViewController.Type)->String{
+        return String(describing: type)
+    }
+}

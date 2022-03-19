@@ -1,0 +1,16 @@
+PODS:
+  - MainTabView (0.1.0)
+
+DEPENDENCIES:
+  - MainTabView (from `../`)
+
+EXTERNAL SOURCES:
+  MainTabView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MainTabView: 6d7458aaf8477b91a738ae0e2485e4bc783ecf30
+
+PODFILE CHECKSUM: b59a664a52d3023efe056d0f7099d02f7f352113
+
+COCOAPODS: 1.11.2
