@@ -9,7 +9,7 @@
 import UIKit
 import MainTabView
 
-class ViewController: UIViewController  {
+class ViewController: UIViewController {
     @IBOutlet weak var mainTabView: MainTabView?
 
     
@@ -43,10 +43,6 @@ extension ViewController: MainTabViewDataSource, MainTabDelegate {
 
 
 extension UIViewController{
-    
-   
-    
-    
     func instance<T: UIViewController>(_ type : T.Type)->T{
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: identifier(type: T.self))

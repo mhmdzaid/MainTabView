@@ -119,9 +119,9 @@ public class MainTabView: UIView {
     
     
     func removeSubViewController(vc: UIViewController) {
-        vc.willMove(toParentViewController: nil)
+        vc.willMove(toParent: nil)
         vc.view.removeFromSuperview()
-        vc.removeFromParentViewController()
+        vc.removeFromParent()
         
     }
     
@@ -130,8 +130,8 @@ public class MainTabView: UIView {
         containerView.addSubview(vc.view)
         vc.view.translatesAutoresizingMaskIntoConstraints = false
         setUpChildConstraints(vc.view)
-        container?.addChildViewController(vc)
-        vc.didMove(toParentViewController: container)
+        container?.addChild(vc)
+        vc.didMove(toParent: container)
     }
     
     

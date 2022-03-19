@@ -9,7 +9,7 @@
 import UIKit
 import MainTabView
 
-class SecondViewController: UIViewController , TabItem {
+class SecondViewController: UIViewController, TabItem {
 
     var tabTitle: String? {
         return "Second"

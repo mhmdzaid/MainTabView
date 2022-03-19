@@ -9,7 +9,7 @@
 import UIKit
 import MainTabView
 
-class ThirdViewController: UIViewController , TabItem {
+class ThirdViewController: UIViewController, TabItem {
     
     var tabTitle: String? {
         return "Third"
