@@ -5,11 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/MainTabView.svg?style=flat)](https://cocoapods.org/pods/MainTabView)
 [![Platform](https://img.shields.io/cocoapods/p/MainTabView.svg?style=flat)](https://cocoapods.org/pods/MainTabView)
 
+![MainTabViewGIF](https://github.com/mozead1996/MainTabView/blob/master/mainTabViewImage.gif)
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+iOS 12
 
 ## Installation
 
@@ -22,7 +25,6 @@ pod 'MainTabView'
 
 ## Usage 
 
-### Usage : 
 1. in the hosting controller add UIView and set its class to MainTabView
 1. drag outlet of MainTabView 
 1. import MainTabView
