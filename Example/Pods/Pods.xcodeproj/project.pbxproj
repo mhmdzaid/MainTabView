@@ -107,9 +107,7 @@
 		0C80952F1CB88048395AD7D62ACBD479 /* MainTabView */ = {
 			isa = PBXGroup;
 			children = (
-				A053813A27E60691004DE1D3 /* DataSource */,
-				A053813C27E60691004DE1D3 /* Delegate */,
-				A053813E27E60691004DE1D3 /* MainTabView.swift */,
+				A015E0C027E622A100033FA3 /* Classes */,
 				4820CF4C2C28364120DD861CE208C5E8 /* Pod */,
 				3F576E25BEC219FE66DF64BFF0280E78 /* Support Files */,
 			);
@@ -172,6 +170,16 @@
 				0C80952F1CB88048395AD7D62ACBD479 /* MainTabView */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A015E0C027E622A100033FA3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A053813A27E60691004DE1D3 /* DataSource */,
+				A053813C27E60691004DE1D3 /* Delegate */,
+				A053813E27E60691004DE1D3 /* MainTabView.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		A053813A27E60691004DE1D3 /* DataSource */ = {
